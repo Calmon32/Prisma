@@ -1,0 +1,200 @@
+.profileSettings {
+	display: none;
+	max-width: 1000px;
+	width: 95%;
+	max-height: 670px;
+	background-color: rgba(255,255,255,1);
+	position: fixed;
+	z-index: 3;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	overflow: auto;
+	-webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+}
+
+.settingsHeader {
+	float: left;
+	width: 100%;
+	height: 170px;
+}
+
+.settingsProfileImage {
+	float: left;
+	padding-left: 33%;
+	padding-top: 28px;
+}
+
+.settingsUserName {
+	text-align: left;
+	float: left;
+	padding: 60px 30px;
+	float: left;
+}
+
+.settingsLeft {
+	float: left;
+	width: 47%;
+	height: 350px;
+}
+
+.personalInformation {
+	height: 20px;
+}
+
+.personalInformation h2 {
+	padding-top: 0px;
+	text-align: center;
+	padding-left: 40px;
+	width: 100%;
+}
+
+.personalInfoLeft {
+	float: left;
+	height: 370px;
+	width: 45%
+}
+
+.personalInfoLeft ul {
+	margin-top: 25px;
+	color: black;
+	text-align: right;
+}
+
+.personalInfoLeft ul li {
+	margin: 15px;
+	color: black;
+	text-align: right;
+}
+
+.personalInfoRight {
+	margin-top: 13px;
+}
+
+.personalInfoRight input {
+	margin-top: 22px;
+}
+
+#changeBio {
+	float: left;
+	margin-top: 20px;
+	width: 50%;
+	height: 70px;
+}
+
+.settingsRight {
+	float: left;
+	width: 50%;
+	height: 350px;
+	color: black;
+}
+
+.changePassword {
+	height: 20px;
+}
+
+.changePassword h2 {
+	padding-top: 0px;
+	margin-left: 20px;
+}
+
+.settingsFooter {
+	width: 520px;
+	margin: 50px auto;
+}
+
+input[type=button], input[type=submit] {
+	background-color: #555555;
+	border: none;
+	color: white;
+	font-size: 16px;
+	cursor: pointer;
+	width: 250px;
+	text-align: center;
+	margin: 1px 0px;
+	padding: 10px 0px;
+	text-decoration:none;
+	border-radius: 5px;
+}
+
+input[type=text], input[type=email], input[type=password] {
+	line-height: 25px;
+	border-radius: 5px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	border: 1px solid white;
+	width: 220px;
+}
+
+input[type=radio] {
+	margin: 30px 5px 0px 5px;
+}
+
+#uploadPost, #uploadProfileIMG {
+	display: none;
+	width: 460px;
+	height: 580px;
+	background-color: white;
+	position: fixed;
+	z-index: 3;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	overflow: auto;
+	-webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+}
+
+#imgPrev, #imgPrev2 {
+	margin: 10px;
+	height: 300px;
+	width: 300px;
+	padding: 5px;
+	border: 1px solid grey;
+}
+
+.inputfile {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.inputfile + #uploadlabel {
+	cursor: pointer;
+    font-size: 1.25em;
+    font-weight: 700;
+    color: white;
+    background-color: black;
+    display: inline-block;
+}
+#uploadlabel, #imgSubmit {
+	background-color: #555555;
+	border: none;
+	color: white;
+	font-size: 16px;
+	cursor: pointer;
+	text-align: center;
+	margin: 1px 0px;
+	padding: 10px 10px;
+	text-decoration:none;
+	border-radius: 5px;
+}
+
+.upload {
+	font-family: sans-serif;
+	width: 400px;
+	text-align: center;
+	margin: 40px auto;
+}
+
+.uploadCaption{
+	width: 100px;
+	margin: 20px 0;
+}
+
+#imgPrev2, #imgPrev {
+	overflow: hidden;
+}

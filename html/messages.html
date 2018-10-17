@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Woohooo</title>
+    <link href="https://fonts.googleapis.com/css?family=Ruda" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans|Raleway" rel="stylesheet">
+    <link href="css\\messages-theme.css" type="text/css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type='text/javascript' src='js\\script.js'></script>
+</head>
+
+<body>
+    <div class="nav">
+        <ul>
+            <li>
+                <a href="/profile"><img src="images\\profile.png" class="navProfileImg">Lucas Calmon</a>
+            </li>
+            <li><a href="/">Feed</a></li>
+            <li><a href="/search">Search</a></li>
+            <li><a href="/messages">Messages</a></li>
+        </ul>
+    </div>
+    <div class="messages">
+        <div class="chats">
+            <div class="friend">
+                <img src="images\\profile.png" style="height: 40px; padding: 3px 15px;float: left;">
+                <h3>Pedro Sustelo</h3>
+            </div>
+            <div class="friend">
+                <img src="images\\profile.png" style="height: 40px; padding: 3px 15px;float: left;">
+                <h3>Demir Ametov</h3>
+            </div>
+            <div class="friend">
+                <img src="images\\profile.png" style="height: 40px; padding: 3px 15px;float: left;">
+                <h3>João Fonseca</h3>
+            </div>
+            <div class="friend">
+                <img src="images\\profile.png" style="height: 40px; padding: 3px 15px;float: left;">
+                <h3>Artur Lee</h3>
+            </div>
+        </div>
+        <div class="chatbox" id="chatbox">
+        </div>
+        <input type="text" name="messageinput" class="messageinput" placeholder="Send Message" onkeypress="sendMessages(event, this.value)">
+    </div>
+</body>
+
+</html>

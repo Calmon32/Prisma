@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Prisma - Feed</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans|Raleway" rel="stylesheet">
+    <link href="/css/main-theme.css" type="text/css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type='text/javascript' src='/js/script.js'></script>
+</head>
+
+<body>
+    <div id="usrinfo" class="{{userid}}/{{username}}"></div>
+    <div class="nav">
+        <ul>
+            <li>
+                <a href="/profile" class="navName"><img src="userProfiles\\user{{userid}}.png" onerror="this.onerror=null;this.src='/userProfiles/profile.png';" class="navProfileImg">{{sessname}}</a>
+            </li>
+            <li><a href="/feed">Feed</a></li>
+            <li><a href="/messages">Messages</a></li>
+            <li><a href="/search">Search</a></li>
+        </ul>
+    </div>
+    <div id="imgSelectBg" onclick="imgDeselect()"></div>
+    <div id="imgSelect">
+        <div id="picture"><img id="selectImage" src="#"></div>
+        <div id="rightColumn">
+            <div id="profile">
+                <img src="#" onerror="this.onerror=null;this.src='/userProfiles/profile.png';" class="profileImgg" id="profileImgg">
+                <li id="selectName"></li>
+                <div id="likesDate">
+                    <img src="/images/nliked.png" class="nliked" id="likebtn" onclick="like(this)">
+                    <p id="likecount"></p>
+                    <div id="tagid"></div>
+                </div>
+            </div>
+            <div id="content">
+                <h3 id="description"></h3>
+                <ul id="comments">
+                </ul>
+                <input type="text" id="leaveComment" class="" placeholder="Send Message" onkeypress="comment(event,this)">
+            </div>
+        </div>
+    </div>
+    <div class="catBox">
+        <div id="food" class="category" onclick="selectCat(this)">
+            <img src="/images/food.jpg">
+            <h3>FOOD</h3>
+        </div>
+        <div id="fitness" class="category" onclick="selectCat(this)">
+            <img src="/images/fitness.jpg">
+            <h3>FITNESS</h3>
+        </div>
+        <div id="fashion" class="category" onclick="selectCat(this)">
+            <img src="/images/fashion.jpeg">
+            <h3>FASHION</h3>
+        </div>
+        <div id="lifestyle" class="category" onclick="selectCat(this)">
+            <img src="/images/lifestyle.jpg">
+            <h3>LIFESTYLE</h3>
+        </div>
+        <div id="travel" class="category" onclick="selectCat(this)">
+            <img src="/images/travel.jpg">
+            <h3>TRAVEL</h3>
+        </div>
+        <div id="pet" class="category" onclick="selectCat(this)">
+            <img src="/images/pet.jpg">
+            <h3>PET</h3>
+        </div>
+        <div id="nature" class="category" onclick="selectCat(this)">
+            <img src="/images/nature.jpg">
+            <h3>NATURE</h3>
+        </div>
+        <div id="funny" class="category" onclick="selectCat(this)">
+            <img src="/images/funny.jpg">
+            <h3>FUNNY</h3>
+        </div>
+        <div id="friends" class="category" onclick="selectCat(this)">
+            <img src="/images/friends.jpg">
+            <h3>FRIENDS</h3>
+        </div>
+    </div>
+    <div class="info">
+        {{#each posts}}
+        <div class="card {{this.tag}}">
+            <div class="username">
+                <ul onclick="window.location = '/user/{{this.username}}'">
+                    <img src="/userProfiles/user{{this.user}}.png" onerror="this.onerror=null;this.src='/userProfiles/profile.png';">
+                    <li>{{this.username}}</li>
+                </ul>
+            </div>
+            <div class="postImageDiv">
+                <img src="/imageDB/{{this.id}}.jpg" class="postImage" id="{{this.id}}">
+            </div>
+            <div class="buttonsDiv">
+                <img src="/images/{{liked}}.png" class="{{liked}}" onclick="like(this,'{{this.id}}')">
+                <p class="likecount">{{this.likes}}</p>
+                <img src="/images/chat.png" class="comment" id="{{this.id}}" onclick="">
+                <p>{{this.comments}}</p>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Woohooo</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans|Raleway" rel="stylesheet">
+    <link href="..\\css\\main-theme.css" type="text/css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type='text/javascript' src='..\\js\\script.js'></script>
+    <script type='text/javascript' src='..\\js\\profile.js'></script>
+</head>
+
+<body onload="loaduser()">
+    <div class="nav">
+        <ul>
+            <li>
+                <a href="/profile"><img src="..\\images\\profile.png" class="navProfileImg"><h7 id="navusername">Lucas Calmon</h7></a>
+            </li>
+            <li><a href="/">Feed</a></li>
+            <li><a href="/search">Search</a></li>
+            <li><a href="/messages">Messages</a></li>
+        </ul>
+    </div>
+    <div class="slider">
+    </div>
+    <div class="header">
+        <div class="profile">
+            <img src="..\\images\\profile.png" class="profileImg">
+            <li class="profileName" id="profilename"><h2 id="username"></h2>
+            </li>
+            <div class="followers">
+                <h2>2000</h2>
+                <h3>Followers</h3>
+            </div>
+            <div class="following">
+                <h2>1000</h2>
+                <h3>Following</h3>
+            </div>
+            <div class="posts">
+                <h2>100</h2>
+                <h3>Posts</h3>
+            </div>
+            <div id="followButton"><h3>Follow</h3></div>
+            <div id="userbio">Nam quis nulla. Integer malesuada. In in enim a arcu imperdiet malesuada. Sed vel lectus. Donec odio urna, tempus molestie, porttitor ut, iaculis quis, sem. </div>
+        </div>
+    </div>
+    <br>
+    <div class="info">
+        <div class="card">
+            <div class="postImageDiv">
+                <img src="https://s-media-cache-ak0.pinimg.com/736x/23/73/06/2373060bd4c8e32c4e9de5f033dce698.jpg" class="postImage">
+            </div>
+            <div class="buttonsDiv">
+                <img src="..\\images\\like.png" class="nliked" onclick="like(this)">
+                <p>1000</p>
+                <img src="..\\images\\chat.png" class="comment" onclick="">
+                <p>1000</p>
+                <img src="..\\images\\view.png" class="views" onclick="">
+                <p>1000</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="postImageDiv">
+                <img src="https://s-media-cache-ak0.pinimg.com/736x/23/73/06/2373060bd4c8e32c4e9de5f033dce698.jpg" class="postImage">
+            </div>
+            <div class="buttonsDiv">
+                <img src="..\\images\\like.png" class="nliked" onclick="like(this)">
+                <p>1000</p>
+                <img src="..\\images\\chat.png" class="comment" onclick="">
+                <p>1000</p>
+                <img src="..\\images\\view.png" class="views" onclick="">
+                <p>1000</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

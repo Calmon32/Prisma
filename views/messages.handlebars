@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Prisma - Messages</title>
+    <link href="https://fonts.googleapis.com/css?family=Ruda" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans|Raleway" rel="stylesheet">
+    <link href="css\\messages-theme.css" type="text/css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="/js/jquery.quickfit.js" type="text/javascript"></script>
+    <script type='text/javascript' src='/js/messages.js'></script>
+</head>
+
+<body>
+    <div class="nav">
+        <ul>
+            <li>
+                <a href="/profile" class="navName"><img src="/userProfiles/user{{userid}}.png" onerror="this.onerror=null;this.src='/userProfiles/profile.png';" class="navProfileImg">{{sessname}}</a>
+            </li>
+            <li><a href="/feed">Feed</a></li>
+            <li><a href="/messages">Messages</a></li>
+            <li><a href="/search">Search</a></li>
+        </ul>
+    </div>
+    <div class="messages">
+        <div class="chats">
+            <div class="friend" onclick="getFriends()">
+                <img src="/images/plus.png" style="height: 40px; padding: 3px 15px;float: left;">
+                <h3>New Message</h3>
+            </div>
+            <div id="imgSelectBg"></div>
+            <div id="popUp">
+                <h3 id="searchText">Search For User</h3>
+                <input type="text" id="searchInput">
+                <div id="friends"></div>
+            </div>
+            {{#each messageArray}}
+            <div class="friend" onclick="getMessages('{{this.id}}');$('.chatbox').scrollTop(0);$('.chatbox').animate({
+  scrollTop: $('.chatbox')[0].scrollHeight - $('.chatbox')[0].clientHeight
+}, 1000);">
+                <img src="/userProfiles/user{{this.id}}.png" onerror="this.onerror=null;this.src='/userProfiles/profile.png';" style="height: 40px; padding: 3px 15px;float: left;">
+                <h3 class="namess">{{this.name}}</h3>
+            </div>
+            {{/each}}
+        </div>
+        <div class="chatbox" id="chatbox">
+        </div>
+        <input type="text" name="messageInput" class="messageinput" placeholder="Send Message" id="messageInput" onkeyup="submitMessage(event, this.value)">
+    </div>
+</body>
+
+</html>

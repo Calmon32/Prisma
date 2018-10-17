@@ -1,0 +1,482 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+
+body {
+	background-color: #efefef;
+}
+
+.header {
+	font-family: 'Open Sans';
+	text-align: center;
+	width: auto;
+	height: 230px;
+}
+
+.nav {
+	font-family: 'Open Sans';
+	background-color: rgba(0, 0, 0, 0.8);
+	position: fixed;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 40px;
+}
+
+.navProfileImg{
+	height: 20px;
+	padding-right: 10px;
+	float: left;
+}
+
+.navName {
+	margin-right: 130px;
+}
+
+ul {
+	margin: 0px 0px;
+	text-align: center;
+}
+
+li {
+	font-family: Raleway;
+	color: #FFF;
+	display: inline-block;
+	font-size: 16px;
+	font-weight: 300;
+	text-transform: uppercase;
+	margin: 10px 4%;
+}
+
+a {
+	text-decoration: none;
+	color: #FFF;
+}
+
+a:hover {
+	color: lightblue;
+}
+
+/* ------------------------*/ /* ---------->>> CARDS <<<-----------*/ /* ------------------------*/
+
+.info {
+	font-family: 'Open Sans';
+	margin-bottom: 59px;
+	max-width: 1300px;
+	margin: auto;
+	text-align: center;
+	margin-top: 20px;
+}
+
+.info p {
+	font-size: 16px;
+	margin: 45px auto;
+}
+
+.card {
+	display: inline-block;
+	box-sizing: border-box;
+	border: 0px solid Black;
+	margin: 20px 20px;
+	width: 300px;
+	border-radius: 5px;
+	background-color: #efefef;
+}
+
+.card h2 {
+	margin: 50px auto;	
+}
+
+.username {
+	height: 40px;
+	margin-top: 20px
+}
+
+.username img {
+	height: 40px;
+	float: left;
+	margin-bottom: 10px;
+}
+
+.username li {
+	color: black;
+	float: left;
+	margin-top: 10px;
+	margin-left: 15px;
+	font-size: 20px;
+}
+
+.postImage, .uploadImg {
+	cursor:pointer;
+	height: 100%;
+	width: 100%;
+}
+
+.postImageDiv {
+	height: 300px;
+	width: 300px;
+	margin-top: 10px;
+	box-shadow: 4px 5px 3px #cccccc;
+}
+
+#postImageDiv > input
+{
+    display: none;
+}
+
+.buttonsDiv {
+	width: 175px;
+	height: 30px;
+	margin: 5px auto;
+}
+
+.buttonsDiv p {
+	text-align: left;
+	width: 50px;
+	float: left;
+	padding: 7px 0 5px 5px;
+	margin: 0;
+}
+
+.liked, .nliked, .comment, .views{
+	cursor:pointer;
+	height: 25px;
+	padding: 3px;
+	float: left;
+}
+
+/* ------------------------*/ /* ---------->>> CATEGORIES <<<-----------*/ /* ------------------------*/
+
+.catBox {
+	text-align: center;
+	font-family: 'Open Sans';
+	margin: 80px auto 10px auto;
+	max-width: 1300px;
+	height: 150px;
+	overflow-y: hidden;
+	z-index: 1;
+    position:relative;
+}
+
+.category {
+	cursor:pointer;
+	display: inline-block;
+	box-sizing: border-box;
+	border: 0px solid Black;
+	margin: 20px 10px;
+	width: 90px;
+	border-radius: 5px;
+	background-color: #efefef;
+}
+
+.category img {
+	height: 90px;
+}
+
+.category h3 {
+	text-align: left;
+	font-family: 'Raleway';
+	font-weight: 100;
+	font-size: 15px; 
+}
+
+.categorySel {
+	display: inline-block;
+	box-sizing: border-box;
+	border: 0px solid Black;
+	margin: 20px 10px;
+	width: 90px;
+	border-radius: 5px;
+	background-color: #efefef;
+}
+
+.categorySel img {
+	height: 90px;
+}
+
+.categorySel h3 {
+	text-align: left;
+	font-family: 'Raleway';
+	font-weight: 100;
+	font-size: 15px; 
+}
+
+/* ------------------------*/ /* ---------->>> PROFILE INFO <<<-----------*/ /* ------------------------*/
+
+.profileName {
+	color: black;
+	font-size: 1.70vw;
+	float: left;
+	margin: 10px 60px 10px 20px;
+	width: 320px;
+}
+.profileName h2 {
+	font-size: 25px;
+	font-weight: 300;
+}
+
+.profile {
+	margin: 0px auto;
+	max-width: 620px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	height: 220px;
+	text-align: left
+}
+
+.profileImg {
+	cursor: pointer;
+	height: 120px;
+	width: 120px;
+}
+
+.profile h2, h3 {
+	float: left;
+}
+
+.followers h2, .following h2, .posts h2 {
+	width: 90px;
+}
+
+.counts {
+	width: 90px;
+}
+
+.followers {
+	margin:15px 20px;
+	width: 90px;
+	height: 60px;
+	float: left;
+}
+
+.following {
+	margin:15px 20px;
+	width: 90px;
+	height: 60px;
+	float: left;
+}
+
+.posts {
+	margin:15px 20px;
+	width: 90px;
+	height: 60px;
+	float: left;
+}
+
+.settingsIcon {
+	cursor: pointer;
+	height: 23px;
+	margin-left: 20px;
+}
+
+.addImgBtn {
+	width: 620px;
+	text-align: center;
+	height: 20px;
+	background-color: grey;
+	box-shadow: 4px 5px 3px #cccccc;
+	margin: 0px auto;
+}
+
+#followButton {
+	color: white;
+	padding: 7px 55px;
+	margin: 8px 10px;
+	margin-left: 28px;
+	float: left;
+	background-color: grey;
+	border-radius: 5px;
+	text-align: center;
+}
+
+#profileimgandname {
+	padding: 0 20px;
+	height: 120px;
+	float: left;
+	margin-left: 20px;
+	text-align: center;
+}
+
+#imgusername {
+	height: 20px;
+	font-size: 16px;
+}
+
+.bio {
+	float: left;
+	margin: 10px 0 0 0;
+	padding: auto;
+	text-align: left;
+	width: 550px;
+	height: 70px;
+}
+
+/* ------------------------*/ /* ---------->>> IMAGE SELECTION <<<-----------*/ /* ------------------------*/
+
+#imgSelectBg {
+	cursor:pointer;
+	width: 100%;
+	height:100vh;
+	top: 0px;
+	background-color: rgba(0,0,0,0.5);
+	position: fixed;
+	z-index: 3;
+	display: none;
+	-webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+}
+
+#imgSelect{
+	max-width: 1000px;
+	width: 95%;
+	max-height: 660px;
+	height: 95%;
+	background-color: rgba(255,255,255,1);
+	position: fixed;
+	z-index: 3;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	display: none;
+	overflow: auto;
+	-webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+}
+
+#picture {
+	float: left;
+	background-color: white;
+	height: 100%;
+	width: 65%;
+}
+
+#picture img {
+	width: 90%;
+	margin: 35px 0 0 35px; 
+	box-shadow: 4px 5px 3px #cccccc;
+}
+
+#rightColumn {
+	float: left;
+	height: 100%;
+	width: 35%;
+}
+
+#profile {
+	width: 100%;
+	height: 18%;
+}
+
+.profileImgg {
+	margin: 20px 10px;
+	height: 100px;
+	float: left;
+	text-align: center;
+}
+
+#profile li {
+	font-size: 20px;
+	margin-top: 25px;
+	color: rgba(0,0,0,1);
+}
+
+#description {
+	height: 50px;
+	width: 320px;
+	font-family: 'Open Sans';
+	font-weight: normal;
+	font-size: 16px;
+	text-align: left;
+	font-family: sans-serif;
+	margin-top: 8px;
+}
+
+#likebtn {
+	margin-left: 30px;
+}
+
+#likesDate {
+
+    height: 60px;
+    width: 200px;
+    margin-left: 100px;
+
+}
+
+#likesDate p {
+	margin-top: 6px;
+	float: left;
+	margin-right: 20px;
+}
+
+#tagid {
+	margin-left: 0px;
+	margin-top: 8px;
+	float: left;
+}
+
+#comments {
+	height: 380px;
+	width: 330px;
+	overflow-y: scroll;
+}
+
+#comments li {
+	background-color: #efefef;
+	width: 265px;
+	padding: 10px;
+}
+
+#comments h3 {
+	float: left;
+	text-align: left;
+	color: rgba(0,0,0,1);
+	font-weight: normal; 
+	font-size: 16px;
+	width: 70%;
+	margin-bottom: 10px;
+}
+
+#comments p {
+	float: left;
+	text-align: left;
+	color: rgba(0,0,0,1);
+	font-weight: normal; 
+	font-size: 14px;
+	text-transform: none;
+	margin-left: 15px; 
+	width: 190px;
+	overflow-x: hidden;
+}
+
+.commmentIcon {
+	height: 50px;
+	float: left;
+	margin-right: 10px;
+}
+
+#leaveComment {
+	height: 30px;
+	padding: 5px;
+	width: 90%;
+	float: left;
+	text-align: left;
+}
+
+/* ------------------------*/ /* ---------->>> SLIDER <<<-----------*/ /* ------------------------*/
+
+.slider {
+	text-align: center;
+	margin: auto;
+	margin-top: 40px; 
+	width: 85%;
+	max-width: 1000px;
+	height: 250px;
+	background-image: url(http://cdn.wallpapersafari.com/50/67/M9YkrI.jpg);
+	background-size: cover;
+	background-position: center center;
+}
+

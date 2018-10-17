@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Woohooo</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans|Raleway" rel="stylesheet">
+    <link href="css\\main-theme.css" type="text/css" rel="stylesheet">
+    <link href="css\\profileSettings-theme.css" type="text/css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type='text/javascript' src='js\\script.js'></script>
+</head>
+
+<body>
+    <div class="nav">
+        <ul>
+            <li>
+                <a href="/profile"><img src="images\\profile.png" class="navProfileImg">Lucas Calmon</a>
+            </li>
+            <li><a href="/">Feed</a></li>
+            <li><a href="/search">Search</a></li>
+            <li><a href="/messages">Messages</a></li>
+        </ul>
+    </div>
+    <div class="slider">
+    </div>
+    <div class="header">
+        <div class="profile">
+            <div id="profileimgandname">
+                <img src="images\\profile.png" class="profileImg">
+                <div id="imgusername">calmon32</div>
+            </div>
+            <li class="profileName">Lucas Calmon
+                <img src="images/settings.png" class="settingsIcon" onclick="opensettings()">
+            </li>
+            <div class="followers">
+                <h2>2000</h2>
+                <h3>Followers</h3>
+            </div>
+            <div class="following">
+                <h2>1000</h2>
+                <h3>Following</h3>
+            </div>
+            <div class="posts">
+                <h2>100</h2>
+                <h3>Posts</h3>
+            </div>
+            <div class="bio">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. In facilis eos amet labore maxime! Eveniet soluta vel pariatur rerum reiciendis tempore accusamus nostrum tenetur, vitae numquam, distinctio nobis, eos fuga?
+            </div>
+        </div>
+    </div>
+    <div id="imgSelectBg" onclick="closesettings()"></div>
+    <div class="profileSettings">
+        <div class="settingsHeader">
+            <div class="settingsProfileImage">
+                <img src="images\\user1.png" height="90px" width="110px" alt="">
+            </div>
+            <div class="settingsUserName">
+                <h2>Demir Ametov</h2>
+            </div>
+        </div>
+        <div class="settingsLeft">
+            <div class="personalInformation">
+                <h2>Personal Information</h2>
+            </div>
+            <div class="personalInfoLeft">
+                <ul>
+                    <li>Name</li>
+                    <br>
+                    <li>Website</li>
+                    <br>
+                    <li>Email</li>
+                    <br>
+                    <li>Gender</li>
+                    <br>
+                    <li>Privacy</li>
+                    <br>
+                    <li>Bio</li>
+                </ul>
+            </div>
+            <div class="personalInfoRight">
+                <input type="text" id="name">
+                <input type="text" id="website">
+                <input type="text" id="email">
+                <form action="">
+                    <input type="radio" name="gender" value="male"> Male
+                    <input type="radio" name="gender" value="female"> Female<br>
+                </form>
+                <form action="">
+                    <input type="radio" name="privacy" value="public"> Public
+                    <input type="radio" name="privacy" value="private"> Private<br>
+                </form>
+                <input type="textarea" id="changeBio">
+            </div>
+        </div>
+        <div class="settingsRight">
+        <div class="changePassword">
+                <h2>Change Password</h2>
+            </div>
+            <div class="personalInfoLeft">
+                <ul>
+                    <li>Old Password</li>
+                    <br>
+                    <li>New Password</li>
+                    <br>
+                    <li>New Password Again</li>
+                    <br>
+                </ul>
+            </div>
+            <div class="personalInfoRight">
+                <input type="text" id="name">
+                <input type="text" id="website">
+                <input type="text" id="email">
+            </div>
+        </div>
+        <div class="settingsFooter">
+            <input type="button" value="Submit Changes" id="submitChanges">
+        </div>
+    </div>
+    <br>
+    <div class="info">
+        <div class="card">
+            <div id="postImageDiv" class="postImageDiv" style="box-shadow: 0 0 #ffffff;border: 4px dashed #444444;">
+                <label for="file-input">
+                    <img src="images\\uploadImg.png" class="postImage">
+                </label>
+                <input id="file-input" type="file"/>
+            </div>
+            <div class="buttonsDiv">
+                <p style="width: 100%;text-align: center;font-weight: bold;">Add Image</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="postImageDiv">
+                <img src="https://s-media-cache-ak0.pinimg.com/736x/23/73/06/2373060bd4c8e32c4e9de5f033dce698.jpg" class="postImage">
+            </div>
+            <div class="buttonsDiv">
+                <img src="images\\like.png" class="nliked" onclick="like(this)">
+                <p>1000</p>
+                <img src="images\\chat.png" class="comment" onclick="">
+                <p>1000</p>
+                <img src="images\\view.png" class="views" onclick="">
+                <p>1000</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="postImageDiv">
+                <img src="https://s-media-cache-ak0.pinimg.com/736x/23/73/06/2373060bd4c8e32c4e9de5f033dce698.jpg" class="postImage">
+            </div>
+            <div class="buttonsDiv">
+                <img src="images\\like.png" class="nliked" onclick="like(this)">
+                <p>1000</p>
+                <img src="images\\chat.png" class="comment" onclick="">
+                <p>1000</p>
+                <img src="images\\view.png" class="views" onclick="">
+                <p>1000</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="postImageDiv">
+                <img src="https://s-media-cache-ak0.pinimg.com/736x/23/73/06/2373060bd4c8e32c4e9de5f033dce698.jpg" class="postImage">
+            </div>
+            <div class="buttonsDiv">
+                <img src="images\\like.png" class="nliked" onclick="like(this)">
+                <p>1000</p>
+                <img src="images\\chat.png" class="comment" onclick="">
+                <p>1000</p>
+                <img src="images\\view.png" class="views" onclick="">
+                <p>1000</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="postImageDiv">
+                <img src="https://s-media-cache-ak0.pinimg.com/736x/23/73/06/2373060bd4c8e32c4e9de5f033dce698.jpg" class="postImage">
+            </div>
+            <div class="buttonsDiv">
+                <img src="images\\like.png" class="nliked" onclick="like(this)">
+                <p>1000</p>
+                <img src="images\\chat.png" class="comment" onclick="">
+                <p>1000</p>
+                <img src="images\\view.png" class="views" onclick="">
+                <p>1000</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="postImageDiv">
+                <img src="https://s-media-cache-ak0.pinimg.com/736x/23/73/06/2373060bd4c8e32c4e9de5f033dce698.jpg" class="postImage">
+            </div>
+            <div class="buttonsDiv">
+                <img src="images\\like.png" class="nliked" onclick="like(this)">
+                <p>1000</p>
+                <img src="images\\chat.png" class="comment" onclick="">
+                <p>1000</p>
+                <img src="images\\view.png" class="views" onclick="">
+                <p>1000</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="postImageDiv">
+                <img src="https://s-media-cache-ak0.pinimg.com/736x/23/73/06/2373060bd4c8e32c4e9de5f033dce698.jpg" class="postImage">
+            </div>
+            <div class="buttonsDiv">
+                <img src="images\\like.png" class="nliked" onclick="like(this)">
+                <p>1000</p>
+                <img src="images\\chat.png" class="comment" onclick="">
+                <p>1000</p>
+                <img src="images\\view.png" class="views" onclick="">
+                <p>1000</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="postImageDiv">
+                <img src="https://s-media-cache-ak0.pinimg.com/736x/23/73/06/2373060bd4c8e32c4e9de5f033dce698.jpg" class="postImage">
+            </div>
+            <div class="buttonsDiv">
+                <img src="images\\like.png" class="nliked" onclick="like(this)">
+                <p>1000</p>
+                <img src="images\\chat.png" class="comment" onclick="">
+                <p>1000</p>
+                <img src="images\\view.png" class="views" onclick="">
+                <p>1000</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="postImageDiv">
+                <img src="https://s-media-cache-ak0.pinimg.com/736x/23/73/06/2373060bd4c8e32c4e9de5f033dce698.jpg" class="postImage">
+            </div>'s'
+            <div class="buttonsDiv">
+                <img src="images\\like.png" class="nliked" onclick="like(this)">
+                <p>1000</p>
+                <img src="images\\chat.png" class="comment" onclick="">
+                <p>1000</p>
+                <img src="images\\view.png" class="views" onclick="">
+                <p>1000</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

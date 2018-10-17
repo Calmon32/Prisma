@@ -1,0 +1,78 @@
+body {
+	background-image: url("../images/background.jpeg");
+	padding: 50px;
+	background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+form {
+	margin: auto;
+	width: 250px;
+	padding: 10px;
+	background-color: rgba(255,255,255, 0.91);
+	padding: 20px 50px 20px 50px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	border-radius: 8px;
+	height: 538px;
+}
+
+.create_your_account{
+	font-family: Raleway;
+	text-align: center;
+	font-size: 20px;
+	color: #545454;
+	padding: 10px 0px;
+}
+
+input[type=text], input[type=email], input[type=password] {
+	line-height: 25px;
+	margin: 10px 0px;
+	padding: 10px;
+	border-radius: 5px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	border: 1px solid white;
+	width: 250px;
+}
+
+.radio_buttons {
+	font-family: Raleway;
+	color: #666666;
+	padding-top: 20px;
+	text-align: center;
+}
+
+.radio_buttons:hover {
+	color: #191919;
+}
+
+input[type=radio] {
+	margin: 0px 10px;
+}
+
+input[type=button] {
+	background-color: #555555;
+	border: none;
+	color: white;
+	font-size: 16px;
+	cursor: pointer;
+	width: 250px;
+	text-align: center;
+	margin: 10px 0px;
+	padding: 15px 0px;
+	display:block;
+	text-decoration:none;
+	border-radius: 5px;
+}
+
+#wrongInput {
+	text-align: center;
+	color: red;
+	border-radius: 5px;
+	max-width: 350px;
+	margin: auto;
+	margin-top: 20px;
+	font-family: raleway;
+	background-color: rgba(255,255,255, 0.91);
+	font-weight: bold;
+	font: bold;
+}

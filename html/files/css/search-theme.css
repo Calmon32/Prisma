@@ -1,0 +1,174 @@
+* {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	font-family: sans-serif;
+}
+
+body {
+	background-color: #efefef;
+}
+
+.header {
+	font-family: 'Open Sans';
+	text-align: center;
+	width: auto;
+	height: 230px;
+}
+
+.nav {
+	font-family: 'Open Sans';
+	background-color: rgba(0, 0, 0, 0.8);
+	position: fixed;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 40px;
+}
+
+.settingsIcon {
+	height: 30px;
+	float: right;
+	position: fixed;
+	right: 10px;
+	top: 5px;
+}
+
+.navProfileImg{
+	height: 20px;
+	padding-right: 10px;
+	float: left;
+}
+
+.navName {
+	margin-right: 130px;
+}
+
+
+ul {
+	margin: 0px 0px;
+	text-align: center;
+}
+
+li {
+	font-family: Raleway;
+	color: #FFF;
+	display: inline-block;
+	font-size: 16px;
+	font-weight: 300;
+	text-transform: uppercase;
+	margin: 10px 4%;
+}
+
+
+a {
+	text-decoration: none;
+	color: #FFF;
+}
+
+a:hover {
+	color: lightblue;
+}
+
+h1 {
+	font-weight: 400;
+	font-size: 30px;
+	min-width: 250px;
+	position: center;
+	margin: 0px auto;
+	padding-top: 100px;
+	margin-bottom: 50px;
+}
+
+h2 {
+	font-weight: 400;
+	font-size: 30px;
+	float: left;
+	margin: 0px auto;
+}
+
+.searchBar {
+	margin: 20px 0px;
+	border-radius: 5px;
+	border: 1px solid #dbdbdb; 
+	text-align: left;
+	height:25px;
+	width: 450px;
+	outline-style: none;
+	text-indent: 10px;
+}
+
+
+/* ------------------------*/ /* ---------->>> CARDS <<<-----------*/ /* ------------------------*/
+
+.info {
+	font-family: 'Open Sans';
+	max-width: 1000px;
+	margin: 30px auto;
+}
+
+.category {
+	display: inline-block;
+	box-sizing: border-box;
+	border: 0px solid Black;
+	margin: 10px 15px;
+	width: 150px;
+	border-radius: 5px;
+	background-color: #efefef;
+}
+
+.category img {
+	height: 150px;
+}
+
+.category h3 {
+	text-align: left;
+	font-family: 'Raleway';
+	font-weight: 100;
+}
+
+/* ------------------------*/ /* ---------->>> USERS <<<-----------*/ /* ------------------------*/
+
+#foundUsers {
+	margin: auto;
+	max-width: 800px;
+}
+
+.user {
+	margin: 10px;
+	display: inline-block;
+	background-color: #dddddd;
+	width: 220px;
+	padding: 10px;
+}
+
+.userIcon {
+	height: 60px;
+	float: left;
+	margin-right: 10px;
+}
+
+.user h3 {
+	width: 150px;
+	text-align: center;
+	float: left;
+	color: rgba(0,0,0,1);
+	font-weight: normal; 
+	font-size: 16px;
+	margin: 10px 0;
+}
+
+.user p {
+	float: left;
+	width: 150px;
+	text-align: center;
+	color: rgba(0,0,0,1);
+	font-weight: normal; 
+	font-size: 14px;
+	text-transform: none;
+}
+
+#cats {
+	display: none;
+}

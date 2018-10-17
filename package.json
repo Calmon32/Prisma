@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "assert": "^1.4.1",
+    "body-parser": "^1.17.1",
+    "connect-mongo": "^2.0.1",
+    "connect-redis": "^3.3.0",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.15.2",
+    "express-favicon": "^2.0.0",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.15.2",
+    "mongodb": "~2.2.27",
+    "multer": "^1.3.0",
+    "mysql": "^2.13.0",
+    "password-hash": "^1.2.2",
+    "readline": "^1.3.0",
+    "serve-favicon": "^2.4.3",
+    "sharp": "^0.21.0",
+    "socket.io": "^2.1.1",
+    "supervisor": "^0.12.0",
+    "uid-safe": "^2.1.4"
+  }
+}

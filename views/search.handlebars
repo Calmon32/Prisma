@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Prisma - Source</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans|Raleway" rel="stylesheet">
+    <link href="css\\search-theme.css" type="text/css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type='text/javascript' src='js\\script.js'></script>
+</head>
+<script type="text/javascript">
+    $(document).ready(function() {
+        setInterval(search, 2000);
+    });
+</script>
+
+<body>
+    <div class="nav">
+        <ul>
+            <li>
+                <a href="/profile" class="navName"><img src="userProfiles\\user{{userid}}.png" onerror="this.onerror=null;this.src='/userProfiles/profile.png';" class="navProfileImg">{{sessname}}</a>
+            </li>
+            <li><a href="/feed">Feed</a></li>
+            <li><a href="/messages">Messages</a></li>
+            <li><a href="/search">Search</a></li>
+        </ul>
+    </div>
+    <div class="search">
+        <div class="header" style="height: 150px">
+            <h1>Search</h1>
+        </div>
+        <input type="text" class="searchBar" id="searchBar">
+    </div>
+    <div id="foundUsers">
+    </div>
+</body>
+
+</html>

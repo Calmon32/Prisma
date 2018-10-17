@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Prisma - {{name}}</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans|Raleway" rel="stylesheet">
+    <link href="/css/main-theme.css" type="text/css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type='text/javascript' src='/js/script.js'></script>
+</head>
+
+<body>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.followed').html("Following");
+            $('.nfollowed').html("Follow");
+        });
+    </script>
+    <div id="usrinfo" class="{{userid}}/{{username}}"></div>
+    <div class="nav">
+        <ul>
+            <li>
+                <a href="/profile" class="navName"><img src="/userProfiles/user{{userid}}.png" onerror="this.onerror=null;this.src='/userProfiles/profile.png';" class="navProfileImg">{{sessname}}</a>
+            </li>
+            <li><a href="/feed">Feed</a></li>
+            <li><a href="/messages">Messages</a></li>
+            <li><a href="/search">Search</a></li>
+        </ul>
+    </div>
+    <div class="slider">
+    </div>
+    <div class="header">
+        <div class="profile">
+            <div id="profileimgandname">
+                <img src="/userProfiles/user{{profileUserID}}.png" onerror="this.onerror=null;this.src='/userProfiles/profile.png';" class="profileImg">
+                <div id="imgusername">{{username}}</div>
+            </div>
+            <li class="profileName" id="profilename"><h2 id="username">{{name}}</h2>
+                <div class="{{isFollowing}}" onclick="follow(this,'{{profileUserID}}')" style="background-color: #555555;
+    border: none;
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+    width: 100px;
+    text-align: center;
+    margin-left: 20px;
+    padding: 10px 0px;
+    text-decoration:none;
+    border-radius: 5px;float: left;">Follow</div>
+            </li>
+            <div class="followers">
+                <h2>{{followersCount}}</h2>
+                <h3>Followers</h3>
+            </div>
+            <div class="following">
+                <h2>{{followingCount}}</h2>
+                <h3>Following</h3>
+            </div>
+            <div class="posts">
+                <h2>{{postsCount}}</h2>
+                <h3>Posts</h3>
+            </div>
+            <div class="bio">
+                {{bio}}
+            </div>
+        </div>
+    </div>
+    <div id="imgSelectBg" onclick="closesettings()"></div>
+    <div id="imgSelect">
+        <div id="picture"><img id="selectImage" src="#"></div>
+        <div id="rightColumn">
+            <div id="profile">
+                <img src="#" onerror="this.onerror=null;this.src='/userProfiles/profile.png';" class="profileImgg" id="profileImgg">
+                <li id="selectName"></li>
+                <div id="likesDate">
+                    <img src="/images/nliked.png" class="nliked" id="likebtn" onclick="like(this)">
+                    <p id="likecount"></p>
+                    <div id="tagid"></div>
+                </div>
+            </div>
+            <div id="content">
+                <h3 id="description"></h3>
+                <ul id="comments">
+                </ul>
+                <input type="text" id="leaveComment" class="" placeholder="Send Message" onkeypress="comment(event,this)">
+            </div>
+        </div>
+    </div>
+    <div class="info">
+        {{#each posts}}
+        <div class="card">
+            <div class="postImageDiv">
+                <img src="/imageDB/{{this.id}}.jpg" onerror="this.onerror=null;this.src='/userProfiles/profile.png';" class="postImage" id="{{this.id}}">
+            </div>
+            <div class="buttonsDiv">
+                <img src="/images/{{liked}}.png" class="{{liked}}" onclick="like(this,'{{this.id}}')">
+                <p class="likecount">{{this.likes}}</p>
+                <img src="/images/chat.png" class="comment" id="{{this.id}}" onclick="">
+                <p>{{this.comments}}</p>
+            </div>
+        </div>
+        {{/each}}
+
+    </div>
+</body>
+
+</html>

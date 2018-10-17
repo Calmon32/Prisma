@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Prisma - Profile</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans|Raleway" rel="stylesheet">
+    <link href="css\\main-theme.css" type="text/css" rel="stylesheet">
+    <link href="css\\profileSettings-theme.css" type="text/css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type='text/javascript' src='js\\script.js'></script>
+    <script type='text/javascript' src='js\\profile.js'></script>
+</head>
+
+<body>
+    <div id="usrinfo" class="{{userid}}/{{username}}"></div>
+    <div class="nav">
+        <ul>
+            <li>
+                <a href="/profile" class="navName"><img src="userProfiles\\user{{userid}}.png" onerror="this.onerror=null;this.src='/userProfiles/profile.png';" class="navProfileImg">{{sessname}}</a>
+            </li>
+            <li><a href="/feed">Feed</a></li>
+            <li><a href="/messages">Messages</a></li>
+            <li><a href="/search">Search</a></li>
+        </ul>
+    </div>
+    <div class="slider">
+    </div>
+    <div class="header">
+        <div class="profile">
+            <div id="profileimgandname">
+                <img src="/userProfiles/user{{userid}}.png" onerror="this.onerror=null;this.src='/userProfiles/profile.png';" class="profileImg">
+                <div id="imgusername">{{username}}</div>
+            </div>
+            <li class="profileName">{{sessname}}
+                <img src="images/settings.png" class="settingsIcon" onclick="opensettings()">
+            </li>
+            <div class="followers">
+                <h2 class="counts">{{followersCount}}</h2>
+                <h3>Followers</h3>
+            </div>
+            <div class="following">
+                <h2 class="counts">{{followingCount}}</h2>
+                <h3>Following</h3>
+            </div>
+            <div class="posts">
+                <h2 class="counts">{{postsCount}}</h2>
+                <h3>Posts</h3>
+            </div>
+            <div class="bio">
+                {{bio}}
+            </div>
+        </div>
+    </div>
+    <div id="imgSelectBg" onclick="closesettings()"></div>
+    <div id="imgSelect">
+        <div id="picture"><img id="selectImage" src="#"></div>
+        <div id="rightColumn">
+            <div id="profile">
+                <img src="#" onerror="this.onerror=null;this.src='/userProfiles/profile.png';" class="profileImgg" id="profileImgg">
+                <li id="selectName"></li>
+                <div id="likesDate">
+                    <img src="/images/nliked.png" class="nliked" id="likebtn" onclick="like(this)">
+                    <p id="likecount"></p>
+                    <div id="tagid"></div>
+                </div>
+            </div>
+            <div id="content">
+                <h3 id="description"></h3>
+                <ul id="comments">
+                </ul>
+                <input type="text" id="leaveComment" class="" placeholder="Send Message" onkeypress="comment(event,this)">
+            </div>
+        </div>
+    </div>
+    <div class="profileSettings">
+    <form action="/changesett" method="POST">
+        <div class="settingsHeader">
+            <div class="settingsProfileImage">
+                <img src="userProfiles\\user{{userid}}.png" onerror="this.onerror=null;this.src='/userProfiles/profile.png';" height="100px" alt="">
+            </div>
+            <div class="settingsUserName">
+                <h2>{{sessname}}</h2>
+            </div>
+        </div>
+        <div class="settingsLeft">
+            <div class="personalInformation">
+                <h2>Personal Information</h2>
+            </div>
+            <div class="personalInfoLeft">
+                <ul>
+                    <li>Name</li>
+                    <br>
+                    <li>Email</li>
+                    <br>
+                    <li>Gender</li>
+                    <br>
+                    <li>Privacy</li>
+                    <br>
+                    <li>Bio</li>
+                </ul>
+            </div>
+            <div class="personalInfoRight">
+                <input type="text" name="name">
+                <input type="text" name="email"><br>
+                <input type="radio" name="gender" value="male"> Male
+                <input type="radio" name="gender" value="female"> Female<br>
+                <input type="radio" name="privacy" value="public"> Public
+                <input type="radio" name="privacy" value="private"> Private<br>
+                <input type="textarea" name="bio" id="changeBio">
+            </div>
+        </div>
+        <div class="settingsRight">
+            <div class="changePassword">
+                <h2>Change Password</h2>
+            </div>
+            <div class="personalInfoLeft">
+                <ul>
+                    <li>Old Password</li>
+                    <br>
+                    <li>New Password</li>
+                    <br>
+                    <li>New Password Again</li>
+                    <br>
+                </ul>
+            </div>
+            <div class="personalInfoRight">
+                <input type="text" name="oldpass">
+                <input type="text" name="newpass">
+                <input type="text" name="newpass2">
+            </div>
+        </div>
+        <div class="settingsFooter">
+            <input type="submit" value="Submit Changes" id="submitChanges">
+            <a href="/logout"><input type="button" value="Log out"></a>
+        </div>
+        </form>
+    </div>
+    <div id="uploadPost">
+        <div class="upload">
+            <form action="/uploadimg" method="POST" enctype="multipart/form-data">
+                Select an image to upload:</br>
+                <img id="imgPrev" src=""></br>
+                <input type="text" name="caption" class="uploadCaption" placeholder="Caption">
+                <br>Tag: 
+                <select name="tag">
+                    <option value="travel">Travel</option>
+                    <option value="nature">Nature</option>
+                    <option value="food">Foods</option>
+                    <option value="friends">Friends</option>
+                    <option value="lifestyle">Lifestyle</option>
+                    <option value="funny">Funny</option>
+                    <option value="fashion">Fashion</option>
+                    <option value="pet">Pet</option>
+                    <option value="fitness">Fitness</option>
+                </select>
+                <input type="file" id="postIMG" name="postIMG" class="inputfile"></br>
+                <label id="uploadlabel" for="postIMG">Choose a file...</label>
+                <input id="imgSubmit" type="submit" value="Upload Image">
+            </form>
+        </div>
+    </div>
+    <div id="uploadProfileIMG">
+        <div class="upload">
+            <form action="/profileimage" method="POST" enctype="multipart/form-data">
+              Select an image to upload:</br>
+              <img id="imgPrev2" src=""></br>
+              <input type="file" id="postIMG2" name="profileIMG" class="inputfile"></br>
+                <label id="uploadlabel" for="postIMG2">Choose a file...</label>
+              <input id="imgSubmit" type="submit" value="Upload Image">
+            </form>
+        </div>
+    </div>
+    <div class="info">
+        <div class="card">
+            <div id="uploadImageDiv" class="uploadImageDiv" style="box-shadow: 0 0 #ffffff;border: 4px dashed #444444;">
+                <img src="images\\uploadImg.png" class="uploadImg">
+            </div>
+            <div class="buttonsDiv">
+                <p style="width: 100%;text-align: center;font-weight: bold;">Add Image</p>
+            </div>
+        </div>
+        {{#each posts}}
+        <div class="card">
+            <div class="postImageDiv">
+                <img src="/imageDB/{{this.id}}.jpg" class="postImage" id="{{this.id}}">
+            </div>
+            <div class="buttonsDiv">
+                <img src="/images/{{this.liked}}.png" class="{{this.liked}}" onclick="like(this,'{{this.id}}')">
+                <p class="likecount">{{this.likes}}</p>
+                <img src="/images/chat.png" class="comment" id="{{this.id}}" onclick="">
+                <p>{{this.comments}}</p>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</body>
+
+</html>

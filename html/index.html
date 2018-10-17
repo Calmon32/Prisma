@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Woohooo</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans|Raleway" rel="stylesheet">
+    <link href="/css/main-theme.css" type="text/css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type='text/javascript' src='/js/script.js'></script>
+</head>
+
+<body>
+    <div class="nav">
+        <ul>
+            <li>
+                <a href="/profile"><img src="/images/profile.png" class="navProfileImg">Lucas Calmon</a>
+            </li>
+            <li><a href="/">Feed</a></li>
+            <li><a href="/search">Search</a></li>
+            <li><a href="/messages">Messages</a></li>
+        </ul>
+    </div>
+    <div id="imgSelectBg" onclick="imgDeselect()"></div>
+    <div id="imgSelect">
+        <div id="picture"><img src="/images/post1.jpeg"></div>
+        <div id="rightColumn">
+            <div id="profile">
+                <img src="/images/profile.png" class="profileImgg">
+                <li>Lucas Calmon</li>
+                <div id="likesDate">
+                    <img src="/images/like.png" class="nliked" id="likebtn" onclick="like(this)">
+                    <p>1000</p>
+                    <img src="/images/view.png" class="views" onclick="">
+                    <p>1000</p>
+                    <div id="dates">27/03/2017</div>
+                </div>
+            </div>
+            <div id="content">
+                <div id="description">
+                    <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
+                </div>
+                <div id="comments">
+                    <ul>
+                        <li><img src="/images/profile.png" class="commmentIcon">
+                            <h3>Demir Ametov</h3>
+                            <p>I love this photo!!</p>
+                        </li>
+                        <li><img src="/images/profile.png" class="commmentIcon">
+                            <h3>Demir Ametov</h3>
+                            <p>I love this photo!!</p>
+                        </li>
+                        <li><img src="/images/profile.png" class="commmentIcon">
+                            <h3>Demir Ametov</h3>
+                            <p>I love this photo!!</p>
+                        </li>
+                        <li><img src="/images/profile.png" class="commmentIcon">
+                            <h3>Demir Ametov</h3>
+                            <p>I love this photo!!</p>
+                        </li>
+                        <li><img src="/images/profile.png" class="commmentIcon">
+                            <h3>Demir Ametov</h3>
+                            <p>I love this photo!!</p>
+                        </li>
+                        <li><img src="/images/profile.png" class="commmentIcon">
+                            <h3>Demir Ametov</h3>
+                            <p>I love this photo!!</p>
+                        </li>
+                        <li><img src="/images/profile.png" class="commmentIcon">
+                            <h3>Demir Ametov</h3>
+                            <p>I love this photo!!</p>
+                        </li>
+                        <li><img src="images/profile.png" class="commmentIcon">
+                            <h3>Demir Ametov</h3>
+                            <p>I love this photo!!</p>
+                        </li>
+                    </ul>
+                </div>
+                <div id="leaveComment">
+                    <input type="text" placeholder="Send Message">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="catBox">
+        <div id="food" class="category" onclick="selectCat(this)">
+            <img src="/images/food.jpg">
+            <h3>FOOD</h3>
+        </div>
+        <div id="fitness" class="category" onclick="selectCat(this)">
+            <img src="/images/fitness.jpg">
+            <h3>FITNESS</h3>
+        </div>
+        <div id="fashion" class="category" onclick="selectCat(this)">
+            <img src="/images/fashion.jpeg">
+            <h3>FASHION</h3>
+        </div>
+        <div id="lifestyle" class="category" onclick="selectCat(this)">
+            <img src="/images/lifestyle.jpg">
+            <h3>LIFESTYLE</h3>
+        </div>
+        <div id="travel" class="category" onclick="selectCat(this)">
+            <img src="/images/travel.jpg">
+            <h3>TRAVEL</h3>
+        </div>
+        <div id="pet" class="category" onclick="selectCat(this)">
+            <img src="/images/pet.jpg">
+            <h3>PET</h3>
+        </div>
+    </div>
+    <div class="info">
+        <div class="card">
+            <div class="username">
+                <ul>
+                    <img src="/images/user1.png">
+                    <li>Pedro Dias</li>
+                </ul>
+            </div>
+            <img src="images/post1.jpeg" class="postImage" onclick="imgSelect()">
+            <div class="buttonsDiv">
+                <img src="/images/like.png" class="nliked" onclick="like(this)">
+                <p>1000</p>
+                <img src="/images/chat.png" class="comment" onclick="">
+                <p>1000</p>
+                <img src="/images/view.png" class="views" onclick="">
+                <p>1000</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="username">
+                <ul>
+                    <img src="/images/user2.png">
+                    <li>Sofia Carvalho</li>
+                </ul>
+            </div>
+            <img src="/images/post6.jpeg" class="postImage">
+            <div class="buttonsDiv">
+                <img src="/images/like.png" class="nliked" onclick="like(this)">
+                <p>1000</p>
+                <img src="/images/chat.png" class="comment" onclick="">
+                <p>1000</p>
+                <img src="/images/view.png" class="views" onclick="">
+                <p>1000</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="username">
+                <ul>
+                    <img src="/images/user3.png">
+                    <li>Raquel Silva</li>
+                </ul>
+            </div>
+            <img src="/images/post3.jpeg" class="postImage">
+            <div class="buttonsDiv">
+                <img src="/images/like.png" class="nliked" onclick="like(this)">
+                <p>1000</p>
+                <img src="/images/chat.png" class="comment" onclick="">
+                <p>1000</p>
+                <img src="/images/view.png" class="views" onclick="">
+                <p>1000</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="username">
+                <ul>
+                    <img src="/images/profile.png">
+                    <li>Daniel Shiffman</li>
+                </ul>
+            </div>
+            <img src="/images/post4.jpg" class="postImage">
+            <div class="buttonsDiv">
+                <img src="/images/like.png" class="nliked" onclick="like(this)">
+                <p>1000</p>
+                <img src="/images/chat.png" class="comment" onclick="">
+                <p>1000</p>
+                <img src="/images/view.png" class="views" onclick="">
+                <p>1000</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="username">
+                <ul>
+                    <img src="/images/profile.png">
+                    <li>Rita Faria</li>
+                </ul>
+            </div>
+            <img src="/images/post5.jpg" class="postImage">
+            <div class="buttonsDiv">
+                <img src="images/like.png" class="nliked" onclick="like(this)">
+                <p>1000</p>
+                <img src="images/chat.png" class="comment" onclick="">
+                <p>1000</p>
+                <img src="images/view.png" class="views" onclick="">
+                <p>1000</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="username">
+                <ul>
+                    <img src="images/profile.png">
+                    <li>Gonçalo Ferreira</li>
+                </ul>
+            </div>
+            <img src="images/post2.jpeg" class="postImage">
+            <div class="buttonsDiv">
+                <img src="images/like.png" class="nliked" onclick="like(this)">
+                <p>1000</p>
+                <img src="images/chat.png" class="comment" onclick="">
+                <p>1000</p>
+                <img src="images/view.png" class="views" onclick="">
+                <p>1000</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="username">
+                <ul>
+                    <img src="images/profile.png">
+                    <li>Lucas Calmon</li>
+                </ul>
+            </div>
+            <img src="http://cdn.iphonephotographyschool.com/wp-content/uploads/2016/12/VSCO-Filters-iPhone-Photography-57.jpg" class="postImage">
+            <div class="buttonsDiv">
+                <img src="images/like.png" class="nliked" onclick="like(this)">
+                <p>1000</p>
+                <img src="images/chat.png" class="comment" onclick="">
+                <p>1000</p>
+                <img src="images/view.png" class="views" onclick="">
+                <p>1000</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="username">
+                <ul>
+                    <img src="images/profile.png">
+                    <li>Lucas Calmon</li>
+                </ul>
+            </div>
+            <img src="https://s-media-cache-ak0.pinimg.com/736x/23/73/06/2373060bd4c8e32c4e9de5f033dce698.jpg" class="postImage">
+            <div class="buttonsDiv">
+                <img src="images/like.png" class="nliked" onclick="like(this)">
+                <p>1000</p>
+                <img src="images/chat.png" class="comment" onclick="">
+                <p>1000</p>
+                <img src="images/view.png" class="views" onclick="">
+                <p>1000</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

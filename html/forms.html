@@ -1,0 +1,58 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans|Raleway" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/form-theme.css" />
+    <link href="https://fonts.googleapis.com/css?family=Diplomata+SC" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type='text/javascript' src='js\\script.js'></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $('.submit').mouseenter(function() {
+            $(this).css("background-color", "#323232");
+            $(this).animate({
+                fontSize: "1.2em"
+            });
+        });
+        $('.submit').mouseleave(function() {
+            $(this).css("background-color", "#555555");
+            $(this).animate({
+                fontSize: "1em"
+            });
+            $(this).css("padding", "15px 0px");
+        });
+    });
+    </script>
+    <title>Sign Up</title>
+</head>
+
+<body>
+    <form name="myForm">
+        <div class="create_your_account" id="lol">CREATE YOUR ACCOUNT</div>
+        <hr>
+        <div class="inputs">
+            <input type="text" name="name" placeholder="Name">
+            <br>
+            <input type="text" name="username" placeholder="Username">
+            <br>
+            <br>
+            <input type="radio" name="gender" value="male" checked>Male
+            <input type="radio" name="gender" value="female">Female
+            <br>
+            <br>
+            <input type="email" name="email" placeholder="Email" pattern="[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*">
+            <br>
+            <input type="password" name="password" placeholder="Password">
+            <br>
+            <input type="password" name="confirm_password" placeholder="Confirm Password">
+            <br>
+            <input type="button" name="submit" class="submit" value="Register" onclick="validateForm()">
+            <br>
+        </div>
+    </form>
+    <div id="wrongInput"></div>
+</body>
+
+</html>
