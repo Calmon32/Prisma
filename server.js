@@ -14,6 +14,7 @@ var _html = __dirname + "/html/";
 var serverFunction = require(__dirname + "/mods/serverFunctions.js");
 var path = require('path');
 var handlebars = require('express-handlebars').create();
+var PORT = process.env.PORT || 8080;
 
 app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
@@ -156,6 +157,6 @@ app.post('/insert', function(req, res){
 });
 
 
-httpServer.listen(8080, function(){
-    console.log('listening on *:8080');
+httpServer.listen(PORT, function(){
+    console.log('listening on *:' + PORT);
 });
