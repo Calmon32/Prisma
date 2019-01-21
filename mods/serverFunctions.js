@@ -233,14 +233,14 @@ exports.uploadIMG = function(req,res,user) {
 			    fs.writeFile('./html/files/imageDB/' + photo._id + '.jpg', outputBuffer, 'binary', function(err){
 			        if (err) throw err;
 			    	res.redirect('/profile');
-			    	fs.unlink(img.path);
+			    	fs.unlinkSync(img.path);
 			    })
 		  	});
 		});
 	}
 	else {
 		res.send('Something went wrong!');
-		fs.unlink(img.path);
+		fs.unlinkSync(img.path);
 	}
 };
 
@@ -258,13 +258,13 @@ exports.changeProfileIMG = function(req,res,user) {
 		    fs.writeFile('./html/files/userProfiles/user' + user.id + '.png', outputBuffer, 'binary', function(err){
 		        if (err) throw err;
 		    	res.redirect('/profile');
-		    	fs.unlink(img.path);
+		    	fs.unlinkSync(img.path);
 		    })
 	  	});
 	}
 	else {
 		res.send('Something went wrong!');
-		fs.unlink(img.path);
+		fs.unlinkSync(img.path);
 	}
 };
 
